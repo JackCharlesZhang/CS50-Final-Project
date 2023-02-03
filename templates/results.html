@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1 style="color:black;">Search Results</h1>
+  
+    <ol>
+        {% for result in results %}
+            <li><a href="{{ '/program?id=%s'%result.id }}">{{ result.title }}</a>
+                <ul>
+                    <li>Location: {{ result.org }}</li>
+                    <li>Type: {{ result.type }}</li>
+                </ul>
+            </li>
+            <br>
+        {% endfor %}
+    </ol>
+    <br>
+
+    <strong>
+    <p style="color:black;">Register a new program <a href="/registerprogram">HERE</a>!</p>
+    </strong>
+{% endblock %}

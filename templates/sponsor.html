@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sponsor
+{% endblock %}
+
+{% block main %}
+    <form action="/sponsor" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="title" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="donation" placeholder="donation" type="number" min="1" required />
+        </div>
+        <button class="btn btn-primary" type="submit">sponsor</button>
+    </form>
+{% endblock %}
